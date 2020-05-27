@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TestDesign</string>
     <string name="charge_booster">Charge Booster</string>
+    <string name="policy"><u>I\'Privacy Policy</u></string>
 </resources>

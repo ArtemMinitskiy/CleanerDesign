@@ -92,14 +92,13 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="280dp"
-                        android:layout_marginTop="16dp"
-                        android:src="@drawable/line_circle"
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:src="@drawable/line_ark"
                         app:layout_constraintBottom_toTopOf="@id/linearLayout4"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent" />
 
                     <com.hookedonplay.decoviewlib.DecoView
                         android:id="@+id/dynamicArcView2"
@@ -109,138 +108,85 @@
                         android:layout_marginTop="32dp"
                         android:layout_marginEnd="32dp"
                         app:dv_arc_gravity_vertical="Top"
+                        app:dv_totalAngle="230"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
                     </com.hookedonplay.decoviewlib.DecoView>
 
-                    <TextView
-                        android:id="@+id/storage_text"
-                        android:layout_width="wrap_content"
+                    <ImageView
+                        android:layout_width="24dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="64dp"
-                        android:text="Storage"
-                        android:textColor="@color/grey"
-                        android:textSize="24sp"
-                        app:layout_constraintEnd_toEndOf="@+id/dynamicArcView2"
-                        app:layout_constraintStart_toStartOf="@+id/dynamicArcView2"
+                        android:layout_marginStart="64dp"
+                        android:layout_marginTop="160dp"
+                        android:src="@drawable/snow"
+                        app:layout_constraintEnd_toStartOf="@+id/mb_text"
+                        app:layout_constraintStart_toStartOf="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="@+id/dynamicArcView2" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="160dp"
+                        android:layout_marginEnd="64dp"
+                        android:src="@drawable/fire"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/mb_text"
                         app:layout_constraintTop_toTopOf="@+id/dynamicArcView2" />
 
                     <TextView
                         android:id="@+id/mb_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="160dp"
                         android:text="2653 mb"
                         android:textColor="@color/circle_color"
                         android:textSize="24sp"
                         app:layout_constraintEnd_toEndOf="@+id/dynamicArcView2"
                         app:layout_constraintStart_toStartOf="@+id/dynamicArcView2"
-                        app:layout_constraintTop_toBottomOf="@+id/storage_text" />
+                        app:layout_constraintTop_toTopOf="@+id/dynamicArcView2" />
 
                     <TextView
+                        android:id="@+id/textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="Found"
+                        android:text="Overheated"
                         android:textColor="@color/grey"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         app:layout_constraintEnd_toEndOf="@+id/dynamicArcView2"
                         app:layout_constraintStart_toStartOf="@+id/dynamicArcView2"
                         app:layout_constraintTop_toBottomOf="@+id/mb_text" />
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:id="@+id/linearLayout4"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
                         android:layout_marginTop="16dp"
                         android:layout_weight="2"
                         android:gravity="center"
                         android:orientation="horizontal"
-                        android:visibility="visible"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/dynamicArcView2">
 
-                        <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:layout_marginRight="16dp"
-                            android:src="@drawable/ram_usage"
-                            app:srcCompat="@drawable/cheap_img" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
 
-                        <TextView
-                            android:id="@+id/ramperct"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="48%"
-                            android:textAppearance="?android:textAppearanceMedium"
-                            android:textColor="#000000"
-                            android:textSize="32sp"
-                            android:visibility="visible" />
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:foregroundGravity="center"
+                                android:scrollbars="horizontal" />
 
-                    </LinearLayout>
+                        </LinearLayout>
 
-                    <LinearLayout
-                        android:id="@+id/linearLayout5"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="RAM Usage"
-                            android:textAppearance="?android:textAppearanceLarge"
-                            android:textColor="@color/grey"
-                            android:textSize="24sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/linearLayout2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
-                        android:orientation="horizontal"
-                        android:weightSum="2"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
-
-                        <TextView
-                            android:id="@+id/usedram"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:text="1.24 GB /"
-                            android:textAppearance="?android:textAppearanceLarge"
-                            android:textColor="#000000"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/totalram"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="left"
-                            android:text=" 2.67 GB"
-                            android:textAppearance="?android:textAppearanceLarge"
-                            android:textColor="#000000"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
+                    </RelativeLayout>
 
                     <Button
                         android:id="@+id/button"
@@ -249,13 +195,13 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="16dp"
                         android:background="@drawable/oval_btn_gradient"
-                        android:text="OPTIMIZE"
+                        android:text="COOL DOWN"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </FrameLayout>
@@ -278,12 +224,12 @@
             android:id="@+id/boost_btn"
             android:layout_width="50dp"
             android:layout_height="80dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -323,9 +269,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
+            android:layout_weight="1"
             app:cardCornerRadius="10dp"
-            app:cardElevation="16dp"
-            android:layout_weight="1">
+            app:cardElevation="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -365,9 +311,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
+            android:layout_weight="1"
             app:cardCornerRadius="10dp"
-            app:cardElevation="16dp"
-            android:layout_weight="1">
+            app:cardElevation="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -408,9 +354,9 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
+            android:layout_weight="1"
             app:cardCornerRadius="10dp"
-            app:cardElevation="16dp"
-            android:layout_weight="1">
+            app:cardElevation="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -443,7 +389,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
-
 
 
     </LinearLayout>

@@ -92,14 +92,14 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/imageView2"
+                        android:layout_width="300dp"
                         android:layout_height="280dp"
-                        android:layout_marginTop="16dp"
                         android:src="@drawable/line_circle"
-                        app:layout_constraintBottom_toTopOf="@id/linearLayout4"
+                        app:layout_constraintBottom_toBottomOf="@+id/dynamicArcView2"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="@+id/dynamicArcView2"  />
 
                     <com.hookedonplay.decoviewlib.DecoView
                         android:id="@+id/dynamicArcView2"
@@ -281,14 +281,13 @@
             app:cardCornerRadius="10dp"
             app:cardElevation="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/oval_btn_white">
+                android:background="@drawable/oval_btn_pink">
 
                 <ImageView
                     android:id="@+id/boost_img"
@@ -296,7 +295,7 @@
                     android:layout_height="30dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="16dp"
-                    android:background="@drawable/boost_img"
+                    android:background="@drawable/boost_img_clicked"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -308,6 +307,7 @@
                     android:layout_gravity="bottom"
                     android:clickable="false"
                     android:text="Boost"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -321,7 +321,6 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="16dp"
@@ -363,7 +362,6 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="16dp"
@@ -406,7 +404,6 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="16dp"

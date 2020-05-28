@@ -92,97 +92,66 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@id/battery_img"
                         android:layout_width="wrap_content"
                         android:layout_height="280dp"
                         android:layout_marginTop="16dp"
-                        android:src="@drawable/line_circle"
-                        app:layout_constraintBottom_toTopOf="@id/linearLayout4"
+                        android:src="@drawable/battery_full"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.hookedonplay.decoviewlib.DecoView
-                        android:id="@+id/dynamicArcView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="240dp"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginTop="32dp"
-                        android:layout_marginEnd="32dp"
-                        app:dv_arc_gravity_vertical="Top"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100%"
+                        android:textSize="20sp"
+                        android:textColor="@color/pink_btn_clicked"
+                        app:layout_constraintBottom_toBottomOf="@+id/battery_img"
+                        app:layout_constraintEnd_toEndOf="@+id/battery_img"
+                        app:layout_constraintStart_toStartOf="@+id/battery_img"
+                        app:layout_constraintTop_toTopOf="@+id/battery_img" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Charging time remaning"
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                    </com.hookedonplay.decoviewlib.DecoView>
-
-                    <TextView
-                        android:id="@+id/storage_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="64dp"
-                        android:text="Storage"
-                        android:textColor="@color/grey"
-                        android:textSize="24sp"
-                        app:layout_constraintEnd_toEndOf="@+id/dynamicArcView2"
-                        app:layout_constraintStart_toStartOf="@+id/dynamicArcView2"
-                        app:layout_constraintTop_toTopOf="@+id/dynamicArcView2" />
-
-                    <TextView
-                        android:id="@+id/mb_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:text="2653 mb"
-                        android:textColor="@color/circle_color"
-                        android:textSize="24sp"
-                        app:layout_constraintEnd_toEndOf="@+id/dynamicArcView2"
-                        app:layout_constraintStart_toStartOf="@+id/dynamicArcView2"
-                        app:layout_constraintTop_toBottomOf="@+id/storage_text" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:text="Found"
-                        android:textColor="@color/grey"
-                        android:textSize="24sp"
-                        app:layout_constraintEnd_toEndOf="@+id/dynamicArcView2"
-                        app:layout_constraintStart_toStartOf="@+id/dynamicArcView2"
-                        app:layout_constraintTop_toBottomOf="@+id/mb_text" />
+                        app:layout_constraintTop_toBottomOf="@+id/battery_img" />
 
 
                     <LinearLayout
-                        android:id="@+id/linearLayout2"
+                        android:id="@+id/linearLayout5"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_marginTop="8dp"
-                        android:orientation="horizontal"
+                        android:layout_weight="2"
                         android:gravity="center"
-                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/dynamicArcView2">
+                        app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                         <TextView
-                            android:id="@+id/usedram"
+                            android:id="@+id/ramperct"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="right"
+                            android:gravity="center"
                             android:text="18h 44m"
-                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textAppearance="?android:textAppearanceMedium"
                             android:textColor="#000000"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
+                            android:textSize="24sp" />
 
-                        <ImageButton
-                            android:id="@+id/question_btn"
-                            app:srcCompat="@drawable/question_mark"
-                            android:background="@color/white"
+                        <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:layout_marginLeft="8dp"
-                            android:scaleType="fitStart"
-                            android:gravity="left" />
+                            app:srcCompat="@drawable/question_mark" />
 
                     </LinearLayout>
 
@@ -191,15 +160,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginBottom="32dp"
                         android:orientation="horizontal"
                         android:weightSum="3"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+                        app:layout_constraintTop_toBottomOf="@id/linearLayout5">
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/normal_mode"
@@ -251,6 +220,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="@drawable/oval_btn_lightblue">
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -325,12 +295,11 @@
             android:id="@+id/boost_btn"
             android:layout_width="50dp"
             android:layout_height="80dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -368,16 +337,15 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
+            android:layout_weight="1"
             app:cardCornerRadius="10dp"
-            app:cardElevation="16dp"
-            android:layout_weight="1">
+            app:cardElevation="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/oval_btn_white">
+                android:background="@drawable/oval_btn_pink">
 
                 <ImageView
                     android:id="@+id/battery_img"
@@ -385,7 +353,7 @@
                     android:layout_height="30dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="16dp"
-                    android:background="@drawable/battery_img"
+                    android:background="@drawable/battery_img_clicked"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -397,6 +365,7 @@
                     android:layout_gravity="bottom"
                     android:clickable="false"
                     android:text="Battery"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -410,11 +379,10 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
+            android:layout_weight="1"
             app:cardCornerRadius="10dp"
-            app:cardElevation="16dp"
-            android:layout_weight="1">
+            app:cardElevation="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -453,11 +421,10 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
+            android:layout_weight="1"
             app:cardCornerRadius="10dp"
-            app:cardElevation="16dp"
-            android:layout_weight="1">
+            app:cardElevation="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

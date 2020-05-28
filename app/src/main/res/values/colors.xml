@@ -9,5 +9,6 @@
     <color name="grey">#B1B1B1</color>
     <color name="battery_btn_clicked">#ac95dc</color>
     <color name="battery_btn">#f5f7f9</color>
+    <color name="pink_btn_clicked">#f27fb2</color>
 
 </resources>

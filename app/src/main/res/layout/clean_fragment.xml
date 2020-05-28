@@ -97,149 +97,154 @@
                         android:layout_height="280dp"
                         android:layout_marginTop="16dp"
                         android:src="@drawable/trash_can"
-                        app:layout_constraintBottom_toTopOf="@id/linearLayout4"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-<!--                    <com.hookedonplay.decoviewlib.DecoView-->
-<!--                        android:id="@+id/dynamicArcView2"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="240dp"-->
-<!--                        android:layout_marginStart="32dp"-->
-<!--                        android:layout_marginTop="32dp"-->
-<!--                        android:layout_marginEnd="32dp"-->
-<!--                        app:dv_arc_gravity_vertical="Top"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toTopOf="parent">-->
-
-<!--                    </com.hookedonplay.decoviewlib.DecoView>-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/storage_text"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginTop="64dp"-->
-<!--                        android:text="Storage"-->
-<!--                        android:textColor="@color/grey"-->
-<!--                        android:textSize="24sp"-->
-<!--                        app:layout_constraintEnd_toEndOf="@+id/dynamicArcView2"-->
-<!--                        app:layout_constraintStart_toStartOf="@+id/dynamicArcView2"-->
-<!--                        app:layout_constraintTop_toTopOf="@+id/dynamicArcView2" />-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/mb_text"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginTop="16dp"-->
-<!--                        android:text="2653 mb"-->
-<!--                        android:textColor="@color/circle_color"-->
-<!--                        android:textSize="24sp"-->
-<!--                        app:layout_constraintEnd_toEndOf="@+id/dynamicArcView2"-->
-<!--                        app:layout_constraintStart_toStartOf="@+id/dynamicArcView2"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/storage_text" />-->
-
-<!--                    <TextView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginTop="16dp"-->
-<!--                        android:text="Found"-->
-<!--                        android:textColor="@color/grey"-->
-<!--                        android:textSize="24sp"-->
-<!--                        app:layout_constraintEnd_toEndOf="@+id/dynamicArcView2"-->
-<!--                        app:layout_constraintStart_toStartOf="@+id/dynamicArcView2"-->
-<!--                        app:layout_constraintTop_toBottomOf="@+id/mb_text" />-->
-
-                    <LinearLayout
-                        android:id="@+id/linearLayout4"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_weight="2"
+                    <TextView
+                        android:id="@+id/ramperct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
                         android:gravity="center"
-                        android:orientation="horizontal"
+                        android:text="48%"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/pink_btn_clicked"
+                        android:textSize="32sp"
                         android:visibility="visible"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/trash">
-
-                        <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:layout_marginRight="16dp"
-                            android:src="@drawable/ram_usage"
-                            app:srcCompat="@drawable/cheap_img" />
-
-                        <TextView
-                            android:id="@+id/ramperct"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="48%"
-                            android:textAppearance="?android:textAppearanceMedium"
-                            android:textColor="#000000"
-                            android:textSize="32sp"
-                            android:visibility="visible" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/linearLayout5"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="RAM Usage"
-                            android:textAppearance="?android:textAppearanceLarge"
-                            android:textColor="@color/grey"
-                            android:textSize="24sp" />
-
-                    </LinearLayout>
+                        app:layout_constraintTop_toBottomOf="@+id/trash" />
 
                     <LinearLayout
                         android:id="@+id/linearLayout2"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
                         android:orientation="horizontal"
-                        android:weightSum="2"
+                        android:weightSum="4"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+                        app:layout_constraintTop_toBottomOf="@+id/ramperct">
 
-                        <TextView
-                            android:id="@+id/usedram"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:text="1.24 GB /"
-                            android:textAppearance="?android:textAppearanceLarge"
-                            android:textColor="#000000"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
 
-                        <TextView
-                            android:id="@+id/totalram"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Chache memory"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginTop="8dp"
+                                android:clickable="false"
+                                android:text="18mb"
+                                android:textColor="@color/pink_btn_clicked"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:gravity="left"
-                            android:text=" 2.67 GB"
-                            android:textAppearance="?android:textAppearanceLarge"
-                            android:textColor="#000000"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            android:background="@drawable/oval_btn_white">
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Temporary files"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginTop="8dp"
+                                android:clickable="false"
+                                android:text="18mb"
+                                android:textColor="@color/pink_btn_clicked"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/oval_btn_white">
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Residual
+                                 files"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginTop="8dp"
+                                android:clickable="false"
+                                android:text="18mb"
+                                android:textColor="@color/pink_btn_clicked"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/oval_btn_white">
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="System
+                                 junk"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginTop="8dp"
+                                android:clickable="false"
+                                android:text="18mb"
+                                android:textColor="@color/pink_btn_clicked"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </LinearLayout>
 
@@ -247,7 +252,7 @@
                         android:id="@+id/button"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="16dp"
                         android:layout_marginBottom="16dp"
                         android:background="@drawable/oval_btn_gradient"
                         android:text="CLEAN"
@@ -279,12 +284,11 @@
             android:id="@+id/boost_btn"
             android:layout_width="50dp"
             android:layout_height="80dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -322,11 +326,10 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
+            android:layout_weight="1"
             app:cardCornerRadius="10dp"
-            app:cardElevation="16dp"
-            android:layout_weight="1">
+            app:cardElevation="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -364,11 +367,10 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
+            android:layout_weight="1"
             app:cardCornerRadius="10dp"
-            app:cardElevation="16dp"
-            android:layout_weight="1">
+            app:cardElevation="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -407,17 +409,16 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
+            android:layout_weight="1"
             app:cardCornerRadius="10dp"
-            app:cardElevation="16dp"
-            android:layout_weight="1">
+            app:cardElevation="16dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/oval_btn_white">
+                android:background="@drawable/oval_btn_pink">
 
                 <ImageView
                     android:id="@+id/clean_img"
@@ -425,7 +426,7 @@
                     android:layout_height="30dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="16dp"
-                    android:background="@drawable/clean_img"
+                    android:background="@drawable/clean_img_clicked"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -437,6 +438,7 @@
                     android:layout_gravity="bottom"
                     android:clickable="false"
                     android:text="Clean"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -444,7 +446,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
-
 
 
     </LinearLayout>

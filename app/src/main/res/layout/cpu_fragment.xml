@@ -93,12 +93,13 @@
 
                     <ImageView
                         android:id="@+id/imageView2"
-                        android:layout_width="2600dp"
+                        android:layout_width="300dp"
                         android:layout_height="280dp"
                         android:src="@drawable/line_ark_copy"
-                        app:layout_constraintBottom_toTopOf="@id/linearLayout4"
+                        app:layout_constraintBottom_toBottomOf="@+id/dynamicArcView2"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/dynamicArcView2"  />
 
                     <com.hookedonplay.decoviewlib.DecoView
                         android:id="@+id/dynamicArcView2"
@@ -162,7 +163,7 @@
                     <RelativeLayout
                         android:id="@+id/linearLayout4"
                         android:layout_width="match_parent"
-                        android:layout_height="20dp"
+                        android:layout_height="120dp"
                         android:layout_marginTop="16dp"
                         android:layout_weight="2"
                         android:gravity="center"
@@ -175,14 +176,21 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center">
+                            android:gravity="center"
+                            android:orientation="horizontal">
 
                             <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/recycler_view"
                                 android:layout_width="match_parent"
-                                android:layout_height="20dp"
+                                android:layout_height="120dp"
                                 android:foregroundGravity="center"
                                 android:scrollbars="horizontal" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Currently no App causing overheated"/>
 
                         </LinearLayout>
 
@@ -235,7 +243,6 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
             app:cardCornerRadius="10dp"
@@ -277,7 +284,6 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
             app:cardCornerRadius="10dp"
@@ -319,7 +325,6 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
             app:cardCornerRadius="10dp"
@@ -329,7 +334,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/oval_btn_white">
+                android:background="@drawable/oval_btn_pink">
 
                 <ImageView
                     android:id="@+id/cpu_img"
@@ -337,7 +342,7 @@
                     android:layout_height="30dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="16dp"
-                    android:background="@drawable/cpu_img"
+                    android:background="@drawable/clean_img_clicked"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -349,6 +354,7 @@
                     android:layout_gravity="bottom"
                     android:clickable="false"
                     android:text="CPU"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -362,7 +368,6 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
             app:cardCornerRadius="10dp"

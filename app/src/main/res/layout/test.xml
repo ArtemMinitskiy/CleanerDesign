@@ -37,30 +37,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/dynamicArcView2" />
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toTopOf="@+id/mb_text"
-                app:layout_constraintEnd_toEndOf="@+id/dynamicArcView2"
-                app:layout_constraintStart_toStartOf="@+id/dynamicArcView2"
-                app:srcCompat="@drawable/arrow" />
 
-            <com.hookedonplay.decoviewlib.DecoView
-                android:id="@+id/dynamicArcView2"
-                android:layout_width="match_parent"
-                android:layout_height="240dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
-                app:dv_arc_gravity_vertical="Top"
-                app:dv_totalAngle="230"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
 
-            </com.hookedonplay.decoviewlib.DecoView>
+        <com.hookedonplay.decoviewlib.DecoView
+            android:id="@+id/dynamicArcView2"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            app:dv_arc_gravity_vertical="Top"
+            app:dv_totalAngle="230"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.hookedonplay.decoviewlib.DecoView>
 
             <TextView
                 android:id="@+id/mb_text"
